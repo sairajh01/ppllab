@@ -8,10 +8,10 @@ def Binary(L,find,start,end):
     if(L[mid]==find):
         return mid
     elif(find>L[mid]):
-        return Binary(L,find, start,mid-1)
-    else:
         return Binary(L,find,mid+1,end)
+    else:
+        return Binary(L,find,start,mid-1)
 
 L=[10,20,30,40,50,60]
-find=30
+find=50
 print(Binary(L,find,0,len(L)-1))
